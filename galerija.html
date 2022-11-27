@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija - Od kočije do tesle!</title>
+    <link rel="stylesheet" type="text/css" href="css/stil.css"> 
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="shortcut icon" href="slike/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- zaglavlje -->
+    <div class="zaglavlje">
+        <div class="zaglavljeLijevo">
+            <a class="naslov" href="index.html">Od kočije do tesle!</a>
+        </div>
+
+        <div class="zaglavljeDesno">
+            <a href="lentaVremena.html">Lenta vremena</a>
+            <a class="trenutno" href="#">Galerija</a>
+            <a href="informacije.html">Informacije</a>
+        </div>
+    </div>
+
+    <!-- naslov i opis stranice -->
+    <p id="galerijaNaslov">Galerija</p>
+    <p id="galerijaOpis">Saznaj svoj karakter po izboru auta!</p>
+    
+    <!-- code za funkciju flip-cardova i korištenje materialize-ove klase row za bolji raspored -->
+    <div class="row">
+        <div class="toyota">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/toyota.jpg" alt="Toyota">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Pick-up truck</p>
+                        <p class="text-card">Birate ovo auto samo zato da ispadnete "veliki" čovjek. Veoma ste ozbiljna i susretljiva osoba koja vidi svijet na drukčiji način. Imate zauzet život i postavljene ciljeve za koje naporno radite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="golf">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/zutiGolf.jpg" alt="Golf">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Golf</p>
+                        <p  class="text-card">Staromodni ste. Uzimate je kao alternativu za koju nećete požaliti. Slušate ex-yu i smatrate da ste proživjeli život kroz mlađe dane.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="oldTimer">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/oldTimer.jpg" alt="Old Timer">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Old Timer</p>
+                        <p class="text-card">Sigurno imate preko 50 godina. Još niste prihvatili tehnologiju i teško se njoj prilagođavate. Kao što naziv kaže "Old Timer" starovremeni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skuter">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/skuter.jpg" alt="Skuter">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Skuter</p>
+                        <p class="text-card">Mladi ste i tek ulazite u svijet auta. Volite brzinu no vaše prijevozno sredstvo vam to onemogućava. Volite ljeto jer tada nije hladno za vožnju. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="brzoAuto">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/brzoAuto.jpg" alt="Brzo Auto">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Brzi Automobil</p>
+                        <p class="text-card">Volite raspolagati s onim što imate. Uživate u pažnji i veoma ste energična osoba. Živite svoj život i ne briga vas za tuđe mišljenje.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bicikl">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="slike/bicikl.jpg" alt="Bicikl">
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="citat">Bicikl</p>
+                        <p class="text-card">Sigurno vodite zdrav i poželjan život. Uživate u prirodi i zraku. Sretna ste osoba koja pronalazi sreću u malim stvarima. Velika je vjerojatnost da ste profesor vjeronauka.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- podnožje -->
+    <div class="podnozje">
+        <img src="slike/editFooter.png" height="40px" width="90px">
+        <p class="textPodnozje">
+            EDIT Code School<br>
+            Gimnazija dr. Mate Ujevića 2022.<br>
+            Mara & Jipp
+        </p>
+    </div>
+</body>
+</html>

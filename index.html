@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glavna - Od kočije do tesle!</title>
+    <link rel="stylesheet" type="text/css" href="css/stil.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="shortcut icon" href="slike/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- zaglavlje -->
+    <div class="zaglavlje">
+        <div class="zaglavljeLijevo">
+            <a class="naslov" href="#">Od kočije do tesle!</a>
+        </div>
+
+        <div class="zaglavljeDesno">
+            <a href="lentaVremena.html">Lenta vremena</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="informacije.html">Informacije</a>
+        </div>
+    </div>
+
+    <!-- naslov -->
+    <p class="citat">Više o...</p>
+
+    <!-- code za slideshow -->
+    <div class="slideshowOkvir">
+        <div class="slajdovi">
+            <a href="#kocija"><img class="slikaSlajda" src="slike/crnaKocija.jpg" style="width:100%"></a>
+        </div>
+        
+        <div class="slajdovi">
+            <a href="#prviAutomobilNaParniPogon"><img class="slikaSlajda" src="slike/prvoAuto.jpg" style="width:100%"></a>
+        </div>
+        
+        <div class="slajdovi">
+            <a href="#prviAutomobilNaGorivo"><img class="slikaSlajda" src="slike/prviAutomobilNaGorivo.jpg" style="width:100%"></a>
+        </div>
+
+        <div class="slajdovi">
+            <a href="#ford"><img class="slikaSlajda" src="slike/buba.jpg" style="width:100%"></a>
+        </div>
+        
+        <div class="slajdovi">
+            <a href="#tesla"><img class="slikaSlajda" src="slike/teslaSlajd.jpg" style="width:100%"></a>
+        </div>
+  
+        <a class="proslo" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="sljedece" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- kočija -->
+    <div id="kocija">
+        <p class="citat">Kočija</p>
+        <p id="text">
+            Kao najveće otkriće kotača nasljedilo je puno više ideja koje su doprinjele današnjici.
+            Kočija se pojavljuje u 18. stoljeću uz vuču konja ili vola, kasnije krajem 19. stoljeća dolazi parni pogon.
+        </p>
+        <center><img src="slike/danKocija.jpg" class="slika"></center>
+    </div>
+
+    <!-- prvi automobil na parni pogon -->
+    <div id="prviAutomobilNaParniPogon">
+        <p class="citat">Prvi automobil na parni pogon</p>
+        <p id="text">
+            Godine 1769. konstruira se prvo vozilo na parni pogon kojeg je nacrtao Francuz N. J. Kugnot.
+            Prema nacrtu se vidio parni stroj u prednjem dijelu koji je mogao prenositi teret svakih 12/15 minuta da bi se postigao potreban tlak za pogon.
+            Prvu izgradnju automobila prema nacrtu postigao je W. Mordoc u Engleskoj. Imao je 3 kotača i parni motor.
+        </p>
+        <div class="iframeKlasa">
+            <iframe height="500px" width="750px" src="https://www.youtube.com/embed/YQOKkhnpsJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- prvi automobil na gorivo -->
+    <div id="prviAutomobilNaGorivo">
+        <p class="citat">Automobil na gorivo</p>
+        <p id="text">
+            Prilikom 1885. godine nagli razvoj automobila gdje je pogon gorivo omogućio je praktičnije prijevozno vozilo.
+            Počinju se koristiti zračne gume, petrolejski motor i drugi načini za paljenje vozila kao na primjer Bosch je omogućio paljenje auta s pomoć električne svjećice.
+        </p>
+        <div class="parallax"></div>
+    </div>
+   
+    <!-- ford -->
+    <div id="ford">
+        <p class="citat">Ford</p>
+        <p id="text">
+            Henry Ford je zaslužan za izum pokretne trake što je značajno ubrzalo proizvodnju auta.
+            Prvo takvo auto pojavilo se u lipnju 1903.
+        </p>
+        <center><a href="https://www.3dtuning.com/en-US/tuning/ford/f-150.svt.raptor/2.door.pickup.truck-supercab.2010" target="_blank"><img src="slike/ford.jpg" class="slika"></a></center>
+        <p style="text-align: center; color: black;">
+            Stvori i svoj ford pick-up truck!<br>
+            Klikom na sliku dolazite do 3D stvaranja auta.
+        </p>
+    </div>
+
+    <!-- tesla -->
+    <div id="tesla">
+        <p class="citat">Tesla</p>
+        <p id="text">
+            Kao najveće postignuće umjetne inteligencije koje je čovjek omogućio pojavljuje se 2003. godine Tesla model S. Nakon uspješne izgradnje modela nastavljaju se raditi drugi protoptipi (Model 3, Model X i Model Y).
+        </p>
+        <div class="iframeKlasa">
+            <iframe height="500px" width="750px" src="https://www.youtube.com/embed/F9opf9-rh0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- podnožje -->
+    <div class="podnozje">
+        <img src="slike/editFooter.png" height="40px" width="90px">
+        <p class="textPodnozje">
+            EDIT Code School<br>
+            Gimnazija dr. Mate Ujevića 2022.<br>
+            Mara & Jipp
+        </p>
+    </div>
+
+    <!-- korištene javascript skripte -->
+    <script src="js/script.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+</body>
+</html>

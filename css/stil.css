@@ -1,0 +1,672 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+body, html 
+{
+    height: 100%;
+}
+
+/* postavljanje boje pozadine i fonta */
+body 
+{
+    background-color: rgb(203, 203, 177);
+    font-family: Inconsolata;
+}
+
+.parallax 
+{
+    background-image: url("../slike/automobilNaGorivo.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* zaglavlje */
+.zaglavlje 
+{
+    padding: 20px;
+    background-color: rgb(166, 166, 145);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* kako linkovi ne bi bili zadane(plave) boje */
+.zaglavlje a
+{
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* isticanje naslova */
+.zaglavlje a.naslov
+{
+    background-color: rgb(124, 124, 99);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* isticanje naslova trenutne stranice */
+.zaglavljeDesno a.trenutno
+{
+    background-color: rgb(113, 113, 93);
+    color: white;
+}
+
+/* mijenjanje boje "linka" prelaskom miša */
+.zaglavljeDesno a:hover 
+{
+    background-color: #ddd;
+    color: black;
+}
+
+/* pomicanje stavki klase "zaglavljeDesno", desno */
+.zaglavljeDesno
+{
+    padding-right: 20px;
+    float: right;   
+}
+
+/* pomicanje stavki klase "zaglavljeLijevo", lijevo */
+.zaglavljeLijevo
+{
+    padding-left: 20px;
+    float: left;   
+}
+
+/* lenta */
+.lenta 
+{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lenta::after 
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* stavka lente */
+.oblak 
+{
+    padding: 10px 150px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.oblak::after 
+{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #006eff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* pomicanje stavki klase "lijevo" na lijevu stranu lente */
+.lijevo 
+{
+    left: 0px;
+}
+
+/* pomicanje stavki klase "desno" na desnu stranu lente */
+.desno 
+{
+    left: 50%;
+}
+
+.lijevo::before 
+{
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.desno::before 
+{
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.desno::after 
+{
+    left: -12px;
+}
+
+.lijevo::after 
+{
+    right: -12px;
+}
+
+/* code za podnožje*/
+.podnozje
+{
+    position: static;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(148, 148, 122);
+    color: white;
+    text-align: center;
+}
+
+/* zoom efekt */
+.zoom
+{
+    transform: scale(0.8);      
+    transition: 0.3s ease-in-out;
+}
+
+.zoom:hover
+{
+    transform: scale(1);
+}
+
+/* postavljanje svake slike u klasi "mi" na visinu i širinu od 300px */
+.mi img
+{
+    height: 300px;
+    width: 300px;
+}
+
+/* raspoređivanje klasi "mara" i "josip" kako bi stranica ljepše izgledala  */
+.mara img
+{
+    margin-left: 400px;
+}
+
+.mara p
+{
+    float: right;
+    padding-right: 650px;
+    padding-top: 10px;
+    font-size: 72px;
+}
+
+.josip img
+{
+    float: right;
+    margin-right: 400px;
+}
+
+.josip p
+{
+    float: left;
+    padding-left: 700px;
+    padding-top: 10px;
+    font-size: 72px;
+}
+
+/* code za slideshow i njegove slajdove */
+.slajdovi
+{
+    display: none;
+}
+
+.slikaSlajda
+{
+    vertical-align: middle;
+    height: 600px;
+    width: 1200px;
+}
+
+.slideshowOkvir
+{
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.proslo, .sljedece
+{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    border-radius: 0 3px 3px 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.sljedece
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* klasa koju smo dodali gotovo svakom naslovu */
+.citat
+{
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+/* uređivanje svakog paragrafa s id-om text */
+#text
+{
+    font-size: 24px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+/* centriranje klase koju svaki iframe ima */
+.iframeKlasa
+{
+    text-align: center;
+}
+
+/* postavljanje paddinga na 50px klasama "iframeKlasa" i "slika" */
+.iframeKlasa, .slika
+{
+    padding: 50px;
+}
+
+/* postavljanje visine i širine slika koje imaju klasu "slika" */
+.slika
+{
+    height: 500px;
+    width: 750px;
+}
+
+/* code za flip-cardove */
+.flip-card 
+{
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+  
+.flip-card-inner 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner 
+{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front 
+{
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back 
+{
+    background-color:rgb(166, 166, 145);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.text-card
+{
+    color: black;
+    font-size: 24px;
+}
+
+/* pomicanje naslova "O projektu" od vrha za 350px */
+.oProjektu
+{
+    padding-top: 350px;
+}
+
+/* mijenjanje veličine, boje, izgleda i pozicije svim navedenim naslovima */
+#galerijaNaslov, #timNaslov, #oProjektuNaslov, #zahvalaNaslov, #kontaktNaslov
+{
+    font-size: 64px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+/* mijenjanje svojstava teksta s informacijama */
+#textInformacije
+{
+    font-size: 32px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+/* postavljanje boje linkova klase "kontakt" u crnu */
+.kontakt a
+{
+    color: black;
+}
+
+/* raspored fotografija */
+#motorIndex
+{
+    float: left;
+    margin-left: 100px;
+}
+
+#automobilNaGorivoIndex
+{
+    float: right;
+    margin-right: 160px;
+}
+
+/* mijenjanje veličine fotografija i drugih svojstava navedenim klasama */
+.toyota img, .golf img, .oldTimer img, .skuter img, .brzoAuto img, .bicikl img
+{
+    height: 400px;
+    width: 500px;
+}
+
+.toyota, .golf, .oldTimer, .skuter, .brzoAuto, .bicikl
+{
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* raspored flip-cardova (znamo da smo mogli navesti sve lijeve/desne flip-cardove u tipa 6 [ili dvije linije, što nije baš čitljivo] linija) */
+.toyota
+{
+    float: left;
+    margin-left: 250px;
+}
+
+.golf
+{
+    float: right;
+    margin-right: 250px;
+}
+
+.oldTimer
+{
+    float: left;
+    margin-left: 250px;
+}
+
+.skuter
+{
+    float: right;
+    margin-right: 250px;
+}
+
+.brzoAuto
+{
+    float: left;
+    margin-left: 250px;
+}
+
+.bicikl
+{
+    float: right;
+    margin-right: 250px;
+}
+
+/* zahvala w3schools i stackoverflow-u */
+#hehe
+{
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+/* tekst opisa galerije */
+#galerijaOpis
+{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* prilagođavanje stranice mobitelima ili uređajima s manjim ekranima, nemamo ništa posebno za reći osim da smo promijenili par svojstava kako bi to postigli */
+@media screen and (max-width: 500px) 
+{
+    .lenta::after 
+    {
+        left: 30px;
+    }
+    
+    .oblak 
+    {
+        width: 100%;
+        padding-left: 90px;
+        padding-right: 50px;
+    }
+
+    .oblak::before 
+    {
+        left: 60px;
+        border: medium solid white;
+        border-width: 8px 8px 8px 0;
+        border-color: transparent white;
+    }
+
+    .oblak::after 
+    {
+        width: 15px;
+        height: 15px;
+        margin-left: 8px;
+    }
+
+    .lijevo::after, .desno::after 
+    {
+        left: 15px;
+    }
+
+    .desno
+    {
+        left: 0%;
+    }
+
+    .zaglavljeLijevo
+    {
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .zaglavljeDesno a
+    {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .zaglavljeDesno 
+    {
+        float: left;
+    }
+
+    .mi img
+    {
+        height: 150px;
+        width: 150px;
+    }
+
+    .mara img
+    {
+        margin-left: 20px;
+    }
+
+    .mara p
+    {
+        padding-right: 40px;
+        padding-top: 30px;
+        font-size: 23px;
+    }
+
+    .josip img
+    {
+        margin-right: 20px;
+    }
+
+    .josip p
+    {
+        padding-left: 40px;
+        padding-top: 35px;
+        font-size: 23px;
+    }
+
+    .slajdovi, .slideshowOkvir, .slikaSlajda
+    {
+        height: 250px;
+        width: 300px;
+    }
+
+    .iframeKlasa, .slika
+    {
+        height: 250px;
+        width: 300px;
+        padding: 50px;
+    }
+
+    .proslo, .sljedece
+    {
+        top: 30%;
+    }
+
+    .citat
+    {
+        font-size: 24px;
+    }
+
+    #text, #textInformacije
+    {
+        font-size: 12px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    iframe
+    {
+        height: 200px;
+        width: 300px;
+    }
+
+    .oProjektu
+    {
+        padding-top: 200px;
+    }
+
+    #galerijaNaslov, #timNaslov, #oProjektuNaslov, #zahvalaNaslov, #kontaktNaslov
+    {
+        font-size: 36px;
+    }
+
+    .podnozje
+    {
+        margin-top: 15px;
+    }
+
+    #motorIndex
+    {
+        float: none;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 50px;
+        height: 250px;
+        width: 300px;
+    }
+
+    #automobilNaGorivoIndex
+    {
+        float: none;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 50px;
+        height: 250px;
+        width: 300px;
+    }
+
+    #hehe
+    {
+        font-size: 8px;
+    }
+
+    .flip-card 
+    {
+        height: 250px;
+        width: 300px;
+    }
+
+    .toyota img, .golf img, .oldTimer img, .skuter img, .brzoAuto img, .bicikl img
+    {
+        height: 250px;
+        width: 300px;
+    }
+
+    .toyota, .golf, .oldTimer, .skuter, .brzoAuto, .bicikl
+    {
+        float: none;
+        margin-left: 10%;
+        padding-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .text-card
+    {
+        font-size: 12px;
+    }
+
+    #galerijaOpis
+    {
+        font-size: 12px;
+    }
+}
